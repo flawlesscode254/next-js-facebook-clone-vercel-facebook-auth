@@ -24,7 +24,7 @@ export default function Component() {
             {/* Sidebar */}
             <SideBar />
             {/* Feed */}
-            <Feed />
+            <Feed
             {/* Widgets */}
           </main>
         </div>

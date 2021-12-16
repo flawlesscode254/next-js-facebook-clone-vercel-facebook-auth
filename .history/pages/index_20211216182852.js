@@ -4,7 +4,6 @@ import { useSession } from "next-auth/react";
 import Header from '../components/Header'
 import LogIn from '../components/LogIn';
 import SideBar from '../components/SideBar';
-import Feed from '../components/Feed';
 
 export default function Component() {
   const { data: session } = useSession();
@@ -24,7 +23,6 @@ export default function Component() {
             {/* Sidebar */}
             <SideBar />
             {/* Feed */}
-            <Feed />
             {/* Widgets */}
           </main>
         </div>
