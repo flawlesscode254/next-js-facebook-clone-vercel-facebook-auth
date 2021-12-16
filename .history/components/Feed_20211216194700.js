@@ -8,7 +8,7 @@ function Feed() {
                 {/* Stories */}
                 <Stories />
                 {/* Input box */}
-                <InputBox />
+                <InputBox
                 {/* Posts */}
             </div>
         </div>

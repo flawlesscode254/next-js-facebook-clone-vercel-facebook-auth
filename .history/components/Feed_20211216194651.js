@@ -1,5 +1,5 @@
 import Stories from "./Stories"
-import InputBox from "./InputBox"
+import 
 
 function Feed() {
     return (
@@ -8,7 +8,6 @@ function Feed() {
                 {/* Stories */}
                 <Stories />
                 {/* Input box */}
-                <InputBox />
                 {/* Posts */}
             </div>
         </div>
