@@ -4,22 +4,16 @@ import { useSession } from "next-auth/react";
 import { EmojiHappyIcon } from "@heroicons/react/outline";
 import { CameraIcon, VideoCameraIcon } from "@heroicons/react/solid";
 import db from "../firebase";
-import firebase from "firebase";
 
 function InputBox() {
     const [post, setPost] = useState("")
     const { data: session } = useSession();
 
-    const sendPost = async (e) => {
+    const sendPost = (e) => {
         e.preventDefault();
-        await db.collection("posts").add({
-            post: post,
-            name: session.user.name,
-            email: session.user.email,
-            image: session.user.image,
-            time: firebase.firestore.FieldValue.serverTimestamp()
+        db.collection("posts").add({
+            post: post
         })
-        await setPost("")
     };
 
   return (

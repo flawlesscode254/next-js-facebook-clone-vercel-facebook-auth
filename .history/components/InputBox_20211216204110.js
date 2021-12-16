@@ -16,8 +16,7 @@ function InputBox() {
             post: post,
             name: session.user.name,
             email: session.user.email,
-            image: session.user.image,
-            time: firebase.firestore.FieldValue.serverTimestamp()
+            image: session.user.image
         })
         await setPost("")
     };

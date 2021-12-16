@@ -4,7 +4,6 @@ import { useSession } from "next-auth/react";
 import { EmojiHappyIcon } from "@heroicons/react/outline";
 import { CameraIcon, VideoCameraIcon } from "@heroicons/react/solid";
 import db from "../firebase";
-import firebase from "firebase";
 
 function InputBox() {
     const [post, setPost] = useState("")
@@ -16,8 +15,7 @@ function InputBox() {
             post: post,
             name: session.user.name,
             email: session.user.email,
-            image: session.user.image,
-            time: firebase.firestore.FieldValue.serverTimestamp()
+            image: session.user.image
         })
         await setPost("")
     };
